@@ -1,6 +1,13 @@
-#cards{
-  display: flex;
-  gap: 2rem;
-  padding-top: 40px;
-  justify-content: center;
+.movie-list{
+  display: grid;
+  grid-template-columns: repeat(4, 0.5fr);
+  justify-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.movie-card{
+  padding-top: 25px;
 }
