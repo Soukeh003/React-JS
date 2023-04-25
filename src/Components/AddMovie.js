@@ -26,6 +26,7 @@ export default function AddMovie({setMovies , movies}) {
   const [addTitle, setAddTitle] = useState("");
   const [addDescription, setAddDescription] = useState("");
   const [addPosterUrl, setAddPosterUrl] = useState("");
+  const [addTrailer, setAddTrailer] = useState("");
   const [addRating, setAddRating] = useState(0);
 
   const handleAdd = () => {
@@ -35,7 +36,8 @@ export default function AddMovie({setMovies , movies}) {
         id: Math.random(),
         title: addTitle,
         description: addDescription,
-        addPosterUrl: addPosterUrl,
+        posterUrl: addPosterUrl,
+        tariler: addTrailer,
         rating: addRating,
       }
     ]);
@@ -80,6 +82,15 @@ export default function AddMovie({setMovies , movies}) {
             fullWidth
             onChange={(e) => {
               setAddPosterUrl(e.target.value);
+            }}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Trailer"
+            variant="outlined"
+            fullWidth
+            onChange={(e) => {
+              setAddTrailer(e.target.value);
             }}
           />
           <Rating
